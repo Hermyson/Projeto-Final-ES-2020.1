@@ -17,9 +17,9 @@
         <td><%= psicologo.crp %></td>
         <td><%= psicologo.nome %></td>
         <td><%= link_to 'Mostrar', psicologo %></td>
-        <td><%= link_to 'Editar', edit_psicologo_path(psicologo) %></td>
+        <td><%= link_to 'Editar', edit_psicologo_path(psicologo),id:"e-#{psicologo.crp}" %></td>
         <td><% if can? :destroy,Psicologo %>
-            <%= link_to 'Delete', psicologo, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to 'Delete', psicologo,id:"d-#{psicologo.crp}", method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %></td>
       </tr>
     <% end %>

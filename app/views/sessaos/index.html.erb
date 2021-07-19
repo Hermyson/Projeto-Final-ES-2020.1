@@ -23,9 +23,9 @@
         <td><%= sessao.paciente.nome %></td>
         <td><%= sessao.psicologo.nome %></td>
         <td><%= link_to 'Mostar', sessao %></td>
-        <td><%= link_to 'Editar', edit_sessao_path(sessao) %></td>
+        <td><%= link_to 'Editar', edit_sessao_path(sessao),id:"e-#{sessao.paciente}" %></td>
         <td><% if can? :destroy,Sessao %>
-            <%= link_to 'Delete', sessao, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to 'Delete', sessao, id:"d-#{sessao.paciente}", method: :delete, data: { confirm: 'Are you sure?' }  %>
           <% end %></td>
       </tr>
     <% end %>

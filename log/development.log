@@ -71151,3 +71151,184 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 7830)
 
 
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2021-07-19 15:38:14 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 753)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/hermyson/Projeto-Final-ES-2020.1/public/packs
+[Webpacker] Hash: e2f281de3ea1fdc4fa5a
+Version: webpack 4.46.0
+Time: 718ms
+Built at: 2021-07-19 15:38:16
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-be412d64645010827f4e.js    125 KiB  application  [emitted] [immutable]  application
+js/application-be412d64645010827f4e.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-be412d64645010827f4e.js js/application-be412d64645010827f4e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 2304.5ms | Allocations: 33065)
+Completed 200 OK in 2319ms (Views: 2307.2ms | ActiveRecord: 0.0ms | Allocations: 36407)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-07-19 15:38:18 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.2ms | Allocations: 601)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 56.2ms | Allocations: 4844)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 67.2ms | Allocations: 8027)
+Completed 200 OK in 113ms (Views: 74.1ms | ActiveRecord: 2.6ms | Allocations: 14588)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-07-19 15:38:25 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 339ms (ActiveRecord: 1.3ms | Allocations: 4694)
+
+
+Started GET "/" for 127.0.0.1 at 2021-07-19 15:38:25 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:2
+  Rendered home/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1099)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 4261)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.2ms | Allocations: 4654)
+
+
+Started GET "/psicologos" for 127.0.0.1 at 2021-07-19 15:38:33 -0300
+Processing by PsicologosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering psicologos/index.html.erb within layouts/application
+  [1m[36mPsicologo Load (0.2ms)[0m  [1m[34mSELECT "psicologos".* FROM "psicologos"[0m
+  ↳ app/views/psicologos/index.html.erb:15
+  Rendered psicologos/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 4185)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 7339)
+Completed 200 OK in 35ms (Views: 19.5ms | ActiveRecord: 1.2ms | Allocations: 11754)
+
+
+Started GET "/psicologos/new" for 127.0.0.1 at 2021-07-19 15:38:37 -0300
+Processing by PsicologosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering psicologos/new.html.erb within layouts/application
+  Rendered psicologos/_form.html.erb (Duration: 2.9ms | Allocations: 953)
+  Rendered psicologos/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1292)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 4443)
+Completed 200 OK in 27ms (Views: 17.0ms | ActiveRecord: 0.3ms | Allocations: 6480)
+
+
+Started GET "/" for 127.0.0.1 at 2021-07-19 15:38:52 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:2
+  Rendered home/index.html.erb within layouts/application (Duration: 18.9ms | Allocations: 1063)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.9ms | Allocations: 4218)
+Completed 200 OK in 51ms (Views: 47.3ms | ActiveRecord: 0.5ms | Allocations: 4603)
+
+
+Started GET "/psicologos/new" for 127.0.0.1 at 2021-07-19 15:50:59 -0300
+Processing by PsicologosController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering psicologos/new.html.erb within layouts/application
+  Rendered psicologos/_form.html.erb (Duration: 1.5ms | Allocations: 553)
+  Rendered psicologos/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 656)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 4369)
+Completed 200 OK in 27ms (Views: 11.8ms | ActiveRecord: 1.3ms | Allocations: 7313)
+
+
+Started POST "/psicologos" for 127.0.0.1 at 2021-07-19 15:51:08 -0300
+Processing by PsicologosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "psicologo"=>{"crp"=>"123", "nome"=>"jose"}, "commit"=>"Cadastrar"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering psicologos/new.html.erb within layouts/application
+  Rendered psicologos/_form.html.erb (Duration: 5.2ms | Allocations: 1593)
+  Rendered psicologos/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1696)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 4780)
+Completed 422 Unprocessable Entity in 179ms (Views: 14.7ms | ActiveRecord: 0.4ms | Allocations: 15164)
+
+
+Started GET "/" for 127.0.0.1 at 2021-07-19 15:57:42 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/home/index.html.erb:2
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:2
+  Rendered home/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 2440)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 5589)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 1.0ms | Allocations: 5976)
+
+
+Started GET "/psicologos" for 127.0.0.1 at 2021-07-19 15:57:43 -0300
+Processing by PsicologosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering psicologos/index.html.erb within layouts/application
+  [1m[36mPsicologo Load (0.9ms)[0m  [1m[34mSELECT "psicologos".* FROM "psicologos"[0m
+  ↳ app/views/psicologos/index.html.erb:15
+  Rendered psicologos/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 1138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.2ms | Allocations: 4862)
+Completed 200 OK in 77ms (Views: 50.6ms | ActiveRecord: 1.6ms | Allocations: 6788)
+
+
+Started DELETE "/psicologos/2" for 127.0.0.1 at 2021-07-19 15:57:49 -0300
+Processing by PsicologosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPsicologo Load (0.3ms)[0m  [1m[34mSELECT "psicologos".* FROM "psicologos" WHERE "psicologos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPsicologo Load (0.2ms)[0m  [1m[34mSELECT "psicologos".* FROM "psicologos" WHERE (id = '2') ORDER BY "psicologos"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/psicologos_controller.rb:74:in `set_psicologo'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/psicologos_controller.rb:62:in `destroy'
+  [1m[36mPsicologo Destroy (6.4ms)[0m  [1m[31mDELETE FROM "psicologos" WHERE "psicologos"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/psicologos_controller.rb:62:in `destroy'
+  [1m[36mTRANSACTION (72.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/psicologos_controller.rb:62:in `destroy'
+Redirected to http://127.0.0.1:3000/psicologos
+Completed 302 Found in 112ms (ActiveRecord: 79.5ms | Allocations: 7136)
+
+
+Started GET "/psicologos" for 127.0.0.1 at 2021-07-19 15:57:49 -0300
+Processing by PsicologosController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering psicologos/index.html.erb within layouts/application
+  [1m[36mPsicologo Load (0.2ms)[0m  [1m[34mSELECT "psicologos".* FROM "psicologos"[0m
+  ↳ app/views/psicologos/index.html.erb:15
+  Rendered psicologos/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 950)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 4451)
+Completed 200 OK in 17ms (Views: 12.1ms | ActiveRecord: 0.4ms | Allocations: 6382)
+
+

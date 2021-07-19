@@ -1,12 +1,3 @@
-Given('estou logada no sistema') do
-  visit '/users/sign_in'
-  fill_in 'user[email]',:with => "admin@admin.com"
-  fill_in 'user[password]', :with => "123456"
-  click_button 'Log in'
-
-end
-
-
 And('eu estou na pagina de criacao da sessao') do
   visit '/sessaos/new'
 end
