@@ -1,0 +1,28 @@
+<%= form_with(model: psicologo) do |form| %>
+  <% if psicologo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(psicologo.errors.count, "error") %> prohibited this psicologo from being saved:</h2>
+
+      <ul>
+        <% psicologo.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= form.label :crp %>
+    <%= form.text_field :crp, id: "crp" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome,id: "nome" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Cadastrar", id: "cadastro-psicologo" %>
+  </div>
+<% end %>

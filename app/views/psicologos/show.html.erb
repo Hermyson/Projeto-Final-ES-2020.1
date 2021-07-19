@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Crp:</strong>
+  <%= @psicologo.crp %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @psicologo.nome %>
+</p>
+
+<%= link_to 'Editar', edit_psicologo_path(@psicologo) %> |
+<%= link_to 'Voltar', psicologos_path %>
+<%= link_to 'Sair',root_path%>
