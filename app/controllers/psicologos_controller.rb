@@ -71,7 +71,7 @@ class PsicologosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_psicologo
-      @psicologo = Psicologo.find(params[:id])
+      @psicologo = Psicologo.where("id = ?", params[:id]).first
     end
 
     # Only allow a list of trusted parameters through.

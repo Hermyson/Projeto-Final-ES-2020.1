@@ -73,8 +73,7 @@ class SessaosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sessao
-      @sessao = Sessao.find(params[:id])
-    end
+      @sessao = Sessao.where("id = ?", params[:id]).first
 
     # Only allow a list of trusted parameters through.
     def sessao_params
