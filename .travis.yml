@@ -1,0 +1,24 @@
+Language: ruby
+
+rvm:
+  - 2.7.3
+
+install:
+  - bundle install --jobs 3 --retry 3
+  - nvm install 10
+  - node -v
+  - npm i -g yarn
+  - yarn
+
+script:
+  - bundle exec rake db:setup
+  - bundle exec rake db:migrate RAILS_ENV=test
+  - bundle exec rails webpacker:compile
+  - rails test test/models/paciente_test.rb
+  - rails test test/models/psicologo_test.rb
+  - rails test test/models/sessao_test.rb
+  - rails test test/models/user_test.rb
+  - bundle exec cucumber
+
+services:
+  - postgresql
