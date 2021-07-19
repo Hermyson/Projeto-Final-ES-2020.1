@@ -1,0 +1,79 @@
+<%= form_with(model: paciente) do |form| %>
+  <% if paciente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(paciente.errors.count, "error") %> prohibited this paciente from being saved:</h2>
+
+      <ul>
+        <% paciente.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome,id:"nome-paciente" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf,id:"cpf"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefone %>
+    <%= form.text_field :telefone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email,id:"email"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :endereco %>
+    <%= form.text_field :endereco,id:"endereco" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado_civil %>
+    <%= form.select :estado_civil,['','Solteiro', 'Casado','Divorciado','Outros'], id:"estado_civil"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantidade_filhos %>
+    <%= form.number_field :quantidade_filhos,value: 0, min: 0, max: 20,id:"quantidade_filhos"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :historico_doencas %>
+    <%= form.text_area :historico_doencas,id:"historico_doencas" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :medicamentos %>
+    <%= form.text_area :medicamentos, id: "medicamentos"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :e_fumante %>
+    <%= form.select :e_fumante,['','Sim', 'Não'],id:"e_fumante" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ingere_alcool %>
+    <%= form.select :ingere_alcool,['','Sim', 'Não'],id:"ingere_alcool" %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :psicologo_id %>
+    <%= form.collection_select(:psicologo_id, @psicologo_psicologos_for_select, :id, :nome,{:selected => @paciente.psicologo_id},{class: ["custom-select", "custom-select-sm", "form-control", "form-control-sm"]})%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Cadastrar", id: "cadastro-paciente" %>
+  </div>
+
+<% end %>

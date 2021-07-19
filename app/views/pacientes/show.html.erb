@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @paciente.nome %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @paciente.cpf %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @paciente.telefone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @paciente.email %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @paciente.endereco %>
+</p>
+
+<p>
+  <strong>Estado civil:</strong>
+  <%= @paciente.estado_civil %>
+</p>
+
+<p>
+  <strong>Quantidade filhos:</strong>
+  <%= @paciente.quantidade_filhos %>
+</p>
+
+<p>
+  <strong>Medicamentos:</strong>
+  <%= @paciente.medicamentos %>
+</p>
+
+<p>
+  <strong>E fumante:</strong>
+  <%= @paciente.e_fumante %>
+</p>
+
+<p>
+  <strong>Ingere alcool:</strong>
+  <%= @paciente.ingere_alcool %>
+</p>
+
+<p>
+  <strong>Psicologo:</strong>
+  <%= @paciente.psicologo_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @paciente.user_id %>
+</p>
+
+<%= link_to 'Edite', edit_paciente_path(@paciente) %> |
+<%= link_to 'Voltar', pacientes_path %>
+<%= link_to 'Sair',root_path%>
