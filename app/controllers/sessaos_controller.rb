@@ -74,7 +74,7 @@ class SessaosController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_sessao
       @sessao = Sessao.where("id = ?", params[:id]).first
-
+    end
     # Only allow a list of trusted parameters through.
     def sessao_params
       params.require(:sessao).permit(:data, :hora, :user_id, :paciente_id, :psicologo_id)
