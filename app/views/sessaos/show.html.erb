@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @sessao.data %>
+</p>
+
+<p>
+  <strong>Hora:</strong>
+  <%= @sessao.hora %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @sessao.user_id %>
+</p>
+
+<p>
+  <strong>Paciente:</strong>
+  <%= @sessao.paciente_id %>
+</p>
+
+<p>
+  <strong>Psicologo:</strong>
+  <%= @sessao.psicologo_id %>
+</p>
+
+<%= link_to 'Editar', edit_sessao_path(@sessao) %> |
+<%= link_to 'Voltar', sessaos_path %>
+<%= link_to 'Sair',root_path%>

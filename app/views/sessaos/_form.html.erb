@@ -1,0 +1,39 @@
+<%= form_with(model: sessao) do |form| %>
+  <% if sessao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sessao.errors.count, "error") %> prohibited this sessao from being saved:</h2>
+
+      <ul>
+        <% sessao.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.date_select :data %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hora %>
+    <%= form.time_select :hora %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :paciente_id %>
+    <%= form.collection_select(:paciente_id, @paciente_pacientes_for_select, :id, :nome, {:selected => @sessao.paciente_id},{class: ["custom-select", "custom-select-sm", "form-control", "form-control-sm"]}) %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :psicologo_id %>
+    <%= form.collection_select(:psicologo_id, @psicologo_psicologos_for_select, :id, :nome,{:selected => @sessao.psicologo_id},{class: ["custom-select", "custom-select-sm", "form-control", "form-control-sm"]})%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Cadastrar", id: "cadastrar-sessao"%>
+  </div>
+<% end %>
