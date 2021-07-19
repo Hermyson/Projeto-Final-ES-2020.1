@@ -1,0 +1,42 @@
+<h1> AGENDA PSICOLOGIA</h1>
+<% if current_user %>
+  Welcome <%= current_user.email.split('@')[0].capitalize %>
+  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to "Login", new_user_session_path %>
+<% end %>
+<p id="notice"><%= notice %></p>
+<% if current_user %>
+  <% if current_user.roles_mask == 1 %>
+    <h5>PSICOLOGO</h5>
+    <%= link_to "Novo Psicologo", new_psicologo_path%>
+    </br>
+    <%= link_to "Lista de Psicologo", psicologos_path %>
+    </br>
+    <h5>PACIENTE</h5>
+    <%= link_to "Novo Paciente", new_paciente_path %>
+    </br>
+    <%= link_to "Lista de Paciente", pacientes_path %>
+    </br>
+
+    <h5>SESSÃO</h5>
+    <%= link_to "Novo Sessão", new_sessao_path %>
+    </br>
+    <%= link_to "Lista de Sessão", sessaos_path %>
+    </br>
+
+  <% else %>
+    <h5>PSICOLOGO</h5>
+    <%= link_to "Lista de Psicologo", psicologos_path %>
+    </br>
+
+    <h5>PACIENTE</h5>
+    <%= link_to "Lista de Paciente", pacientes_path %>
+    </br>
+
+    <h5>SESSÃO</h5>
+    <%= link_to "Lista de Sessão", sessaos_path %>
+    </br>
+
+<% end %>
+<% end %>
