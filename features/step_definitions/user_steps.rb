@@ -12,12 +12,10 @@ When("eu crio um usuario com o e email com {string} e a senha {string} e a confi
   fill_in 'user[password_confirmation]', :with => confirmar_senha
   check 'user[roles][]'
 
-
 end
 And('eu clico em criar o usuario') do
   click_button 'Sign up'
 end
-
 
 Then ('eu vejo uma mensagem cadastrado com sucesso') do
   expect(page).to have_content("Welcome! You have signed up successfully.")
