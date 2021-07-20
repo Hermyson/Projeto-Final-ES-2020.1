@@ -4,25 +4,13 @@
 ## Codacy
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/f6169d9bb80a4a03b2c6af9a67dd2290)](https://www.codacy.com/gh/Hermyson/Projeto-Final-ES-2020.1/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Hermyson/Projeto-Final-ES-2020.1&amp;utm_campaign=Badge_Grade)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Prova Final de Engenharia de Software
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+## URL heroku
+https://projeto-final-es-2020-1.herokuapp.com/
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#Usuário Administrador
+email: admin@admin.com
+senha: 123456
